@@ -7,11 +7,11 @@ module Sync
       Sync.load_config(path, Rails.env) if path.exist?
     end
 
-    if(defined? ActiveRecord)
+    if(defined? ActiveRecord::Base)
       initializer "sync.activerecord" do
         ActiveRecord::Base.send :extend, Model::ClassMethods
       end
-    elsif(defined? Mongoid)
+    elsif(defined? Mongoid::Document)
       initializer "sync.mongoid" do
         Mongoid::Document.send :extend, Model::ClassMethods
       end
