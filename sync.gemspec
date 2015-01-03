@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'cache_digests'
   s.add_development_dependency 'mocha', '~> 0.13.3'
   s.add_development_dependency 'sqlite3'
+  s.add_development_dependency 'mongoid'
   s.add_development_dependency 'pry'
   s.add_development_dependency 'minitest', '< 5.0.0'
   s.add_development_dependency 'codeclimate-test-reporter'
